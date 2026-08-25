@@ -6,7 +6,9 @@ interface TimelineItem {
   year: string;
   role: string;
   company: string;
+  summary: string;
   details: string[];
+  featured?: boolean;
 }
 
 const TIMELINE_ITEMS: TimelineItem[] = [
@@ -14,31 +16,38 @@ const TIMELINE_ITEMS: TimelineItem[] = [
     year: "2026",
     role: "Research Assistant",
     company: "IMXD Lab, IDC School of Design, IIT Bombay",
-    details: ["Virtual Reality Simulation", "Digital Twins", "Unreal Engine 5", "XR Research"],
+    summary: "Conducting XR research focused on Unreal Engine 5 virtual reality simulations, industrial digital twin replicas, and interactive spatial environments.",
+    details: ["VR Simulation", "Digital Twins", "Unreal Engine 5", "Interactive Environments", "XR Research"],
+    featured: true,
   },
   {
     year: "2025",
     role: "XR Instructor",
     company: "TechShikSha",
-    details: ["Unreal Engine", "Blender", "VR/XR Training", "Student Mentoring"],
+    summary: "Led technical instruction and hands-on mentoring in Unreal Engine 5, Blender 3D modeling, and real-time interactive VR development.",
+    details: ["Unreal Engine 5", "Blender", "VR/XR Training", "Mentorship"],
   },
   {
     year: "2024",
-    role: "Research Intern",
+    role: "Research Intern (NSF)",
     company: "COSMOS Lab, University of Tennessee, Knoxville (USA)",
-    details: ["ASTERS Project", "Emergency Evacuation Simulation", "Unreal Engine", "NSF Research"],
+    summary: "Engineered ASTERS emergency evacuation simulation combining Unreal Engine, OpenCV computer vision tracking, and dynamic A* egress routing.",
+    details: ["ASTERS Project", "Emergency Evacuation Simulation", "Unreal Engine", "Computer Vision", "NSF Research"],
+    featured: true,
   },
   {
     year: "2023",
     role: "XR Developer Intern",
     company: "Madras Mind Works Pvt. Ltd.",
-    details: ["AR/VR Applications", "Unreal Engine Development", "Interactive Experiences"],
+    summary: "Developed interactive AR/VR applications in Unreal Engine, optimizing real-time 3D graphics pipelines and user interaction systems.",
+    details: ["AR/VR Development", "Unreal Engine", "Interactive Systems", "Asset Pipeline"],
   },
   {
     year: "2022 & Before",
-    role: "Data Analytics Journey",
-    company: "Foundation & Learning",
-    details: ["Data Analysis", "Python", "SQL", "Visualization"],
+    role: "Computer Science & Data Foundation",
+    company: "Academic & Skill Development",
+    summary: "Built a core technical foundation in Python programming, C++, computer vision fundamentals, linear algebra, and data analytics.",
+    details: ["Python", "C++", "Data Analysis", "Computer Vision Basics"],
   },
 ];
 
@@ -83,22 +92,28 @@ export default function Experience() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="w-full text-left md:text-right glass-card p-4 md:p-5 max-w-[380px] ml-auto rounded-xl relative"
+                        className={`w-full text-left md:text-right glass-card p-5 max-w-[420px] ml-auto rounded-xl relative ${
+                          item.featured ? "border-white/20 shadow-lg" : ""
+                        }`}
                       >
                         {/* Time indicator */}
                         <span className="text-[10px] font-mono tracking-wider text-[#86868b] uppercase block mb-1.5">
                           {item.company} • {item.year}
                         </span>
                         {/* Title */}
-                        <h3 className="text-base md:text-lg font-medium text-white mb-2.5">
+                        <h3 className="text-base md:text-lg font-semibold text-white mb-2">
                           {item.role}
                         </h3>
+                        {/* Summary */}
+                        <p className="text-xs text-[#86868b] font-light leading-relaxed mb-3.5">
+                          {item.summary}
+                        </p>
                         {/* Pill tags */}
                         <div className="flex flex-wrap md:justify-end gap-1.5">
                           {item.details.map((detail) => (
                             <span
                               key={detail}
-                              className="text-[9px] tracking-wider font-light text-white/75 bg-white/5 px-2 py-0.5 rounded-full border border-white/5"
+                              className="text-[9px] tracking-wider font-light text-white/75 bg-white/5 px-2.5 py-0.5 rounded-full border border-white/5"
                             >
                               {detail}
                             </span>
@@ -118,22 +133,28 @@ export default function Experience() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="w-full text-left glass-card p-4 md:p-5 max-w-[380px] mr-auto rounded-xl relative"
+                        className={`w-full text-left glass-card p-5 max-w-[420px] mr-auto rounded-xl relative ${
+                          item.featured ? "border-white/20 shadow-lg" : ""
+                        }`}
                       >
                         {/* Time indicator */}
                         <span className="text-[10px] font-mono tracking-wider text-[#86868b] uppercase block mb-1.5">
                           {item.company} • {item.year}
                         </span>
                         {/* Title */}
-                        <h3 className="text-base md:text-lg font-medium text-white mb-2.5">
+                        <h3 className="text-base md:text-lg font-semibold text-white mb-2">
                           {item.role}
                         </h3>
+                        {/* Summary */}
+                        <p className="text-xs text-[#86868b] font-light leading-relaxed mb-3.5">
+                          {item.summary}
+                        </p>
                         {/* Pill tags */}
                         <div className="flex flex-wrap gap-1.5">
                           {item.details.map((detail) => (
                             <span
                               key={detail}
-                              className="text-[9px] tracking-wider font-light text-white/75 bg-white/5 px-2 py-0.5 rounded-full border border-white/5"
+                              className="text-[9px] tracking-wider font-light text-white/75 bg-white/5 px-2.5 py-0.5 rounded-full border border-white/5"
                             >
                               {detail}
                             </span>

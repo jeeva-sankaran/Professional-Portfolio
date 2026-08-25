@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FileText } from "lucide-react";
 
 export default function Overlay() {
   const [mounted, setMounted] = useState(false);
@@ -58,7 +59,7 @@ export default function Overlay() {
 
   return (
     <div className="absolute inset-0 z-10 pointer-events-none select-none">
-      {/* Section 1: Introduction */}
+      {/* Section 1: Introduction & Primary Title */}
       <div
         style={{ 
           opacity: opacity1, 
@@ -67,15 +68,43 @@ export default function Overlay() {
         }}
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
       >
-        <span className="text-xs uppercase tracking-[0.4em] text-[#86868b] mb-4 font-semibold">
-          Selected Works & Portfolio
+        <span className="text-xs uppercase tracking-[0.35em] text-[#86868b] mb-4 font-semibold">
+          Unreal Engine Developer &amp; XR Researcher
         </span>
         <h1 className="text-4xl md:text-7xl lg:text-8xl font-extralight tracking-tight text-white max-w-5xl leading-[1.15]">
           JEEVANANTHAM SANKARAN<span className="font-semibold">.</span>
         </h1>
-        <p className="text-base md:text-xl lg:text-2xl font-light text-[#86868b] mt-6 tracking-wide max-w-2xl text-balance">
-          VR Specialist designing immersive experiences at the intersection of simulation, interaction, and storytelling.
+        <p className="text-base md:text-xl lg:text-2xl font-light text-[#86868b] mt-5 tracking-wide max-w-3xl text-balance leading-relaxed">
+          Building immersive simulations, digital twins, VR experiences, and interactive virtual environments with Unreal Engine 5.
         </p>
+
+        {/* Supporting areas strip */}
+        <div className="flex flex-wrap justify-center items-center gap-2 mt-4 text-[11px] md:text-xs text-white/60 tracking-wider font-light">
+          <span>VR/XR</span>
+          <span className="text-[#86868b]">•</span>
+          <span>Digital Twins</span>
+          <span className="text-[#86868b]">•</span>
+          <span>Simulation</span>
+          <span className="text-[#86868b]">•</span>
+          <span>Technical Art</span>
+          <span className="text-[#86868b]">•</span>
+          <span>Computer Vision</span>
+          <span className="text-[#86868b]">•</span>
+          <span>Python</span>
+        </div>
+
+        {/* Interactive Hero CTAs */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4 pointer-events-auto">
+          <a
+            href="mailto:jeevaofficial1407@gmail.com?subject=Request%20for%20Resume%20-%20Jeevanantham%20Sankaran"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-medium text-xs md:text-sm rounded-full border border-white/15 hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg hover:scale-[1.02] active:scale-100 backdrop-blur-md"
+          >
+            <FileText className="w-4 h-4 text-white/80" />
+            Download Resume
+          </a>
+        </div>
       </div>
 
       {/* Section 2: Core Philosophy */}
@@ -88,10 +117,10 @@ export default function Overlay() {
         className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-20 lg:px-32 text-left max-w-3xl"
       >
         <span className="text-xs uppercase tracking-[0.4em] text-[#86868b] mb-4 font-semibold">
-          Immersive Simulations
+          Immersive Simulations &amp; Research
         </span>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight tracking-tight text-white leading-tight">
-          I design <span className="font-medium text-white">VR simulations</span> that bridge real‑world challenges with virtual innovation.
+          I design <span className="font-medium text-white">VR simulations</span> that bridge real‑world research with virtual innovation.
         </h2>
       </div>
 
@@ -105,10 +134,10 @@ export default function Overlay() {
         className="absolute inset-0 flex flex-col justify-center items-end px-8 md:px-20 lg:px-32 text-right max-w-3xl ml-auto"
       >
         <span className="text-xs uppercase tracking-[0.4em] text-[#86868b] mb-4 font-semibold">
-          Human-Centred Design
+          Digital Twins &amp; Technical Art
         </span>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-extralight tracking-tight text-white leading-tight">
-          Focusing on <span className="font-medium text-white">AR/VR &amp; digital twins</span> to build the next standard of training.
+          Engineering <span className="font-medium text-white">Digital Twins &amp; XR</span> to set new standards in virtual training.
         </h2>
       </div>
 
