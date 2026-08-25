@@ -96,7 +96,8 @@ export default function Overlay() {
         {/* Interactive Hero CTAs */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4 pointer-events-auto">
           <a
-            href="mailto:jeevaofficial1407@gmail.com?subject=Request%20for%20Resume%20-%20Jeevanantham%20Sankaran"
+            href="/resume.pdf"
+            download="Jeevanantham_Sankaran_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-medium text-xs md:text-sm rounded-full border border-white/15 hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg hover:scale-[1.02] active:scale-100 backdrop-blur-md"

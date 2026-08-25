@@ -204,7 +204,8 @@ export default function Projects() {
           {/* Quick Action Resume Download */}
           <div className="mb-10">
             <a
-              href="mailto:jeevaofficial1407@gmail.com?subject=Request%20for%20Resume%20-%20Jeevanantham%20Sankaran"
+              href="/resume.pdf"
+              download="Jeevanantham_Sankaran_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-semibold text-xs md:text-sm rounded-full hover:bg-neutral-200 transition-all duration-300 shadow-lg hover:scale-[1.02] active:scale-100"
