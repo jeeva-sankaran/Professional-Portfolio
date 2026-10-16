@@ -13,6 +13,14 @@ interface TimelineItem {
 
 const TIMELINE_ITEMS: TimelineItem[] = [
   {
+    year: "Sep 2026 - Present",
+    role: "Unreal Developer",
+    company: "X Alt Studios",
+    summary: "Working on VR-based gaming applications and medical solutions using Virtual Reality (VR) technology.",
+    details: ["Unreal Engine", "Virtual Reality (VR)", "VR Gaming", "Medical Solutions"],
+    featured: true,
+  },
+  {
     year: "2026",
     role: "Research Assistant",
     company: "IMXD Lab, IDC School of Design, IIT Bombay",
@@ -78,7 +86,7 @@ export default function Experience() {
               const isEven = index % 2 === 0;
 
               return (
-                <div key={item.year} className="relative flex flex-col md:flex-row md:items-center">
+                <div key={`${item.company}-${item.year}`} className="relative flex flex-col md:flex-row md:items-center">
                   {/* Glowing Node Dot on Timeline */}
                   <div className="absolute left-4 md:left-1/2 top-6 md:top-1/2 w-3.5 h-3.5 rounded-full bg-white border-[3px] border-[#121212] shadow-[0_0_8px_rgba(255,255,255,0.8)] z-10 -translate-x-1/2 -translate-y-1/2" />
 
